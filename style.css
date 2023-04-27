@@ -1,0 +1,729 @@
+* { 
+    margin: 0;
+    padding: 0; 
+}
+
+@font-face { 
+    font-family: "Quando Regular"; 
+    src: url("../fuentes/Quando-Regular.ttf"); 
+} 
+
+@font-face {
+    font-family: "Rancho-Regular";
+    src: url("../fuentes/Rancho-Regular.ttf");
+}
+
+body {
+    text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("imagenes/fondo-pagina.png") ;
+    background-attachment:fixed;
+    background-size:cover;
+	overflow-x: hidden;
+}
+
+/* css a nivel general de todas las paginas */
+
+/* CSS Cabecera y Menu */
+
+.cabecera {
+    padding-top: 50px;
+}
+
+.navbar {
+    padding: 30px 15px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   }
+   
+.nav-item {
+    list-style: none;
+    padding: 10px 7px 2px 7px;
+    font-size:x-large;
+    font: bold;
+    font-family: 'Montserrat';
+    display: inline-block;
+   }
+
+.navbar-nav li a { 
+    color:black;
+    text-decoration: none;
+   }
+
+/* CSS Main de imagenes */
+
+.seccion-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+
+.seccion-imagenes {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-imagenes figure {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    border-radius:6px;
+    box-shadow: 0px 15px 25px rgb(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.seccion-imagenes figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    }
+
+.seccion-imagenes figure .texto{
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11,103,123,0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.seccion-imagenes figure:hover > .texto{
+    opacity:1;
+    visibility: visible;
+    margin-bottom: 15px;
+    }
+
+.seccion-imagenes figure .texto p {
+    color: black;
+    font-size: 50px;
+    transition: all 500ms ease-out;
+    margin-top: 120px;
+    text-shadow: 3px 3px 0 #abb7cf;
+    }
+
+.seccion-imagenes figure:hover > img{
+    transform: scale(1.3);
+}    
+
+/*Fin Main imagenes*/
+
+/* Inicio Seccion Imagenes mobile */
+
+.seccion-imagenes-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.items-imagenes-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-mobile { 
+    width: 60%;
+    margin-bottom: 3rem;
+    border: 2px solid black;
+}
+
+.items-imagenes-mobile .img {
+    vertical-align: middle;
+}
+
+/* CSS Seccion Nosotros */
+
+.seccion-nosotros {
+    font-size: larger;
+    padding: 15px;
+    margin: 5px;
+}
+
+.seccion-nosotros h2 {
+    font-size: x-large;
+    padding: 15px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+.nosotros{
+    background-image: url("../imagenes/fondo_pastel.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.texto-nosotros {
+    padding: 30px 30px 50px 30px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    margin-left: 500px;
+    margin-right: 500px;
+    text-align: center;
+    font: size 80%;
+    min-width: 10%;
+}
+
+/* CSS Seccion Productos */
+
+.seccion-productos {
+    font-size: medium;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+}
+
+.seccion-productos h2 {
+    text-align: center;
+    font-size: x-large;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+	display: grid; 
+    place-content: center;  
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+    max-width: 1200px;
+    padding: 50px;
+    margin: auto;
+}
+
+.grid-item{
+	position:relative;
+}
+
+.grid-img{
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+    box-shadow: 0px 10px 10px rgb(0,0,0,0.5);
+}
+
+.grid-title {
+	position:absolute;
+	bottom: 0;
+	color: whitesmoke;
+	background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+    font-size: large;
+}
+ /*	
+.grid-item:nth-child(4){
+	grid-column-start: span 2;
+}
+
+.grid-item:nth-child(5){
+	grid-row-start: span 2;
+}
+
+.grid-item:nth-child(9){
+	grid-column-start: span 2;
+}*/
+
+
+/* CSS Seccion Exposiciones */
+
+.seccion-expos {
+    font-size: medium;
+    padding: 15px;
+    margin: 5px;
+}
+.seccion-expos h2 {
+    text-align: center;
+    font-size: x-large;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.imagen-expo {
+    width: 70%;
+    padding: 5px;
+    margin: 5px;
+    box-decoration-break: clone;
+    box-shadow: 1px 1px 1px 1px #999;
+}
+
+.texto-exposiciones {
+    padding: 30px 30px 15px 30px;
+    margin-top: 2px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font: size 10%;
+    text-align: center;
+    min-width: 10%;
+}
+
+.info-expo {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.info-expo .img-expo{
+    transform: rotate(-5deg);
+    border: solid black 5px;
+    width: 40%;
+}
+
+.vuelta-inicio {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/*.whatsapp {
+    position: fixed;
+    bottom: 5;
+    right: 0;
+}*/
+
+/* CSS Footer - Pie de pagina comun a todas las paginas menos pagina contacto*/
+
+.pie-pagina {
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+   }
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+   }
+
+.contacto li{
+    display: inline-table;
+    padding: 5px;
+}
+
+.pie-pagina p {
+    text-align: center;
+    font-size: x-small;
+}
+
+/* CSS Seccion Contactos */
+
+.datos-contacto {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container-contacto{
+    max-width: 1440px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-container {
+    margin: 10px 0 30px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px; 
+}
+
+.col-md-6 {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h4 {
+    font-weight: bold;
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-contacto {
+    padding-left: 0;
+    list-style: none;
+}
+
+.info-contacto li {
+    padding-top: 20px;
+}
+
+.info-contacto a {
+    color: black;
+    text-decoration: none;
+}
+
+.formulario-contacto {
+    margin-bottom: 15px;
+    
+}
+
+.formulario-contacto label{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 550;
+    font: bold;
+}
+
+textarea.form-control {
+    height: auto;
+    margin-bottom: 20px;
+}
+  
+.button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    background: rgb(187, 187, 187);
+    position: relative;
+}
+
+.btn {
+    height: 50px;
+    padding: 14px 20px;
+    background-color: gray;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
+}
+
+.pie-pagina-contacto {
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pie-pagina-contacto p {
+    text-align: center;
+    font-size: x-small;
+}
+
+
+
+/* Media Queries */
+/* Movil pequeño - 0px a 320px */
+/* Movil */
+@media only screen and (max-width: 320px) {
+    body {
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        overflow-x: hidden;
+    }
+    .seccion-imagenes { 
+        padding: 10px 7px 2px 7px;
+        margin: 40px;
+        }
+    
+    .imagen-expo {
+        width: 45%;
+        box-decoration-break: clone;
+        box-shadow: 2px 2px 2px 2px #999;
+        }
+
+    .texto-nosotros {
+        text-shadow: 3px 3px 0 #c9c8c8;
+        text-align: center;
+        font: size 15%;
+        }
+
+    .main-container-inicio {
+        display: none;}
+
+    .texto-nosotros {
+        padding: 30px 30px 15px 30px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        font: size 10%;
+        width: auto;
+        }
+
+    .texto-exposiciones {
+        padding: 30px 30px 15px 30px;
+        margin-top: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font: size 10%;
+        text-align: center;
+        width: auto;
+        }
+
+    .grid-container {
+        grid-template-columns: repeat(2,1fr);
+        }
+    .grid-title{
+        font-size: smaller;
+    }
+
+  }
+
+/* Movil comun - 321px a 480px */
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    body {
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background: size 100% 100%;
+        overflow-x: hidden;} 
+
+    .seccion-imagenes-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+    
+    .main-container-inicio {
+        display: none;} 
+
+    .texto-nosotros {
+        padding: 30px 30px 15px 30px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        font: size 10%;
+        width: auto;
+                }
+
+    .grid-container {
+        grid-template-columns: repeat(2,1fr);}
+            
+    .grid-title{
+        font-size: smaller;}
+    
+    .texto-exposiciones {
+        padding: 30px 30px 15px 30px;
+        margin-top: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font: size 10%;
+        text-align: center;
+        width: auto;
+        }
+
+    .imagen-expo {
+        width:50%;
+        box-decoration-break: clone;
+        box-shadow: 2px 2px 2px 2px #999;}
+    }
+    
+
+
+/* Tablet - 481px a 768px */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        overflow-x: hidden;
+    }   
+    .imagen-expo {
+        width: 60%;
+        box-decoration-break: clone;
+        box-shadow: 2px 2px 2px 2px #999;
+    }
+
+    .texto-nosotros {
+        padding: 30px 30px 15px 30px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        font: size 10%;
+        width: auto;
+            }
+
+    .texto-exposiciones {
+        padding: 30px 30px 15px 30px;
+        margin-top: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font: size 10%;
+        text-align: center;
+        width: auto;
+        }
+
+    .seccion-imagenes-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+
+    .main-container-inicio {
+        display: none;}
+
+    .grid-container {
+        grid-template-columns: repeat(3,1fr);}
+    
+    .grid-title{
+        font-size: smaller;}
+    }
+  
+/* Tablet normal - 769px a 960px */
+@media only screen and (min-width: 769px) and (max-width: 960px) {
+    body {
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        overflow-x: hidden;
+    }
+
+    .imagen-expo {
+        width: 70%;
+        box-decoration-break: clone;
+        box-shadow: 2px 2px 2px 2px #999;
+    }
+
+    .texto-exposiciones {
+        padding: 30px 30px 15px 30px;
+        margin-top: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font: size 10%;
+        text-align: center;
+        width: auto;
+        }
+
+    .texto-nosotros {
+        padding: 30px 30px 15px 30px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        font: size 10%;
+        width: auto;
+            }  
+
+    .seccion-imagenes-mobile {
+        display: none;
+    }
+
+    .container-contacto {
+        width: 750px;
+      }
+
+    .seccion-imagenes figure .texto p {
+        color: black;
+        font-size: 35px;
+        transition: all 500ms ease-out;
+        margin-top: 120px;
+        text-shadow: 1px 1px 0 #abb7cf;
+    }
+  }
+
+  @media (min-width: 960px) {   
+    .seccion-imagenes-mobile {
+        display: none;
+    }
+
+    @media screen and (orientation:landscape) and (max-width: 1200px) {
+        .seccion-imagenes figure .texto p {
+            color: black;
+            font-size: 40px;
+            transition: all 500ms ease-out;
+            margin-top: 120px;
+            text-shadow: 1px 1px 0 #abb7cf;
+        }
+    }
+
+ @media (min-width: 992px){ 
+    .container-contacto {
+   width: 970px;}
+ }
+
+ @media (min-width:1024px){
+    .grid-container {
+        grid-template-columns: repeat(4,1fr);
+        width: 90%;
+        margin:auto;
+    }
+ }
+/* Desktop Chico - 960px a 1024px */
+
+@media only screen and (min-width: 961px){
+.texto-nosotros {
+    padding: 30px 30px 15px 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    font: size 10%;
+    width: auto;
+        }
+
+.imagen-expo {
+    width: 80%;
+    box-decoration-break: clone;
+    box-shadow: 2px 2px 2px 2px #999;
+        }
+
+.texto-exposiciones {
+    padding: 30px 30px 15px 30px;
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font: size 10%;
+    text-align: center;
+    width: auto;
+        }
+    }
+@media (min-width: 992px){
+    .col-md-6 {
+      width: 50%;
+      float: left;
+    }
+}
+
+
+@media (min-width: 1200px) {
+.navbar-expand-lg .navbar-toggler {
+  display: none;
+}
+
+.container-contacto {
+    width: 1170px;
+  }
+}
+
+/* Ordenador Escritorio - 1025px a 1328px */
